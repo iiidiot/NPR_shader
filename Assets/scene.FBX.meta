@@ -1,0 +1,517 @@
+fileFormatVersion: 2
+guid: 0e52713eb60254946b1f7a0aeb27c23c
+timeCreated: 1511397313
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: 1
+    100002: 1 1
+    100004: 1 2
+    100006: 1 3
+    100008: 2
+    100010: 2 1
+    100012: 2 2
+    100014: 2 3
+    100016: 3
+    100018: 3 1
+    100020: 4
+    100022: Core
+    100024: Core Electric circle
+    100026: Core Electric sphere
+    100028: CoreCircleSparkle
+    100030: CoreSparkle
+    100032: DistortBall
+    100034: electric
+    100036: electric 1
+    100038: Gate_Left
+    100040: Gate_Left 1
+    100042: Gate_Right
+    100044: Gate_Right 1
+    100046: Inside1_Down
+    100048: Inside1_Up
+    100050: Inside2_Down
+    100052: Inside2_Middle
+    100054: Inside2_screen
+    100056: Inside2_Up
+    100058: Inside3
+    100060: LightProbManager
+    100062: Locator1_10
+    100064: Locator1_11
+    100066: Locator1_6
+    100068: Locator1_7
+    100070: Locator1_8
+    100072: Locator1_9
+    100074: Middle
+    100076: PerpStage_Inside_Collision
+    100078: PerpStage_S01_Inside1
+    100080: PerpStage_S01_Inside2
+    100082: PerpStage_S01_Inside3
+    100084: Reflection Probe01
+    100086: Reflection Probe03
+    100088: ReflectionProbes
+    100090: S01_Globle_1
+    100092: S01_Globle_2
+    100094: S01_Globle_3
+    100096: S01_Globle_4
+    100098: S01_Inside1_Motion
+    100100: S01_Inside2_C01
+    100102: S01_Inside2_C01_Motion01
+    100104: S01_Inside2_C01_Motion02
+    100106: S01_Inside2_C01_Motion03
+    100108: S01_Inside2_C01_Motion04
+    100110: S01_Inside2_C03
+    100112: S01_Inside2_C04
+    100114: S01_Inside2_C05
+    100116: S01_Inside2_C06
+    100118: S01_Inside2_C09
+    100120: S01_Inside2_C10
+    100122: S01_Inside2_Motion
+    100124: S01_Inside2_Motion01
+    100126: S01_Inside2_Motion02
+    100128: S01_Inside2_Motion03
+    100130: S01_Inside2_Motion04
+    100132: S01_Inside2_Motion05
+    100134: S01_Inside2_Motion06
+    100136: S01_Inside2_Motion07
+    100138: S01_Inside2_Motion08
+    100140: S01_Inside2_Motion09
+    100142: S01_Inside2_T
+    100144: S01_Inside3_C01
+    100146: S01_Inside3_C02
+    100148: S01_Inside3_C02 1
+    100150: S01_Inside3_C04
+    100152: S01_Inside3_C06
+    100154: S01_Inside3_C07
+    100156: S01_Inside3_C08A
+    100158: S01_Inside3_C08B
+    100160: S01_Inside3_C09
+    100162: S01_Inside3_C11
+    100164: S01_Inside3_Motion
+    100166: S01_Inside3_Motion01
+    100168: S01_Inside3_Motion02
+    100170: S01_Inside3_Motion03
+    100172: S01_Inside3_T
+    100174: S01_Inside_C01
+    100176: S01_Inside_C02
+    100178: S01_Inside_C04
+    100180: S01_Inside_C05
+    100182: S01_Inside_C06
+    100184: S01_Inside_Cable
+    100186: S01_Inside_Motion01
+    100188: S01_Inside_Motion02
+    100190: S01_Inside_Motion03
+    100192: S01_Inside_Motion04
+    100194: S01_Inside_Motion05
+    100196: S01_Inside_Motion06
+    100198: S01_Inside_Motion07
+    100200: S01_Inside_Motion08
+    100202: S01_Inside_Motion09
+    100204: S01_Inside_Motion10
+    100206: S01_Inside_Motion11
+    100208: S01_Inside_T
+    100210: S01_Screen01
+    100212: S01_Screen02
+    100214: S01_Screen03
+    100216: S01_Screen04
+    100218: //RootNode
+    100220: Sparkle
+    100222: Sparkle 1
+    100224: Sparkle 2
+    100226: Sparkle 3
+    100228: sparkleLocal
+    100230: sparkleLocal 1
+    100232: sparkleLocal 2
+    100234: sparkleLocal 3
+    100236: sparkleLocal 4
+    100238: sparkleLocal 5
+    100240: sparkleLocal 6
+    100242: sparkleLocal 7
+    100244: sparkleWorld
+    100246: sparkleWorld 1
+    100248: sparkleWorld 2
+    100250: sparkleWorld 3
+    400000: 1
+    400002: 1 1
+    400004: 1 2
+    400006: 1 3
+    400008: 2
+    400010: 2 1
+    400012: 2 2
+    400014: 2 3
+    400016: 3
+    400018: 3 1
+    400020: 4
+    400022: Core
+    400024: Core Electric circle
+    400026: Core Electric sphere
+    400028: CoreCircleSparkle
+    400030: CoreSparkle
+    400032: DistortBall
+    400034: electric
+    400036: electric 1
+    400038: Gate_Left
+    400040: Gate_Left 1
+    400042: Gate_Right
+    400044: Gate_Right 1
+    400046: Inside1_Down
+    400048: Inside1_Up
+    400050: Inside2_Down
+    400052: Inside2_Middle
+    400054: Inside2_screen
+    400056: Inside2_Up
+    400058: Inside3
+    400060: LightProbManager
+    400062: Locator1_10
+    400064: Locator1_11
+    400066: Locator1_6
+    400068: Locator1_7
+    400070: Locator1_8
+    400072: Locator1_9
+    400074: Middle
+    400076: PerpStage_Inside_Collision
+    400078: PerpStage_S01_Inside1
+    400080: PerpStage_S01_Inside2
+    400082: PerpStage_S01_Inside3
+    400084: Reflection Probe01
+    400086: Reflection Probe03
+    400088: ReflectionProbes
+    400090: S01_Globle_1
+    400092: S01_Globle_2
+    400094: S01_Globle_3
+    400096: S01_Globle_4
+    400098: S01_Inside1_Motion
+    400100: S01_Inside2_C01
+    400102: S01_Inside2_C01_Motion01
+    400104: S01_Inside2_C01_Motion02
+    400106: S01_Inside2_C01_Motion03
+    400108: S01_Inside2_C01_Motion04
+    400110: S01_Inside2_C03
+    400112: S01_Inside2_C04
+    400114: S01_Inside2_C05
+    400116: S01_Inside2_C06
+    400118: S01_Inside2_C09
+    400120: S01_Inside2_C10
+    400122: S01_Inside2_Motion
+    400124: S01_Inside2_Motion01
+    400126: S01_Inside2_Motion02
+    400128: S01_Inside2_Motion03
+    400130: S01_Inside2_Motion04
+    400132: S01_Inside2_Motion05
+    400134: S01_Inside2_Motion06
+    400136: S01_Inside2_Motion07
+    400138: S01_Inside2_Motion08
+    400140: S01_Inside2_Motion09
+    400142: S01_Inside2_T
+    400144: S01_Inside3_C01
+    400146: S01_Inside3_C02
+    400148: S01_Inside3_C02 1
+    400150: S01_Inside3_C04
+    400152: S01_Inside3_C06
+    400154: S01_Inside3_C07
+    400156: S01_Inside3_C08A
+    400158: S01_Inside3_C08B
+    400160: S01_Inside3_C09
+    400162: S01_Inside3_C11
+    400164: S01_Inside3_Motion
+    400166: S01_Inside3_Motion01
+    400168: S01_Inside3_Motion02
+    400170: S01_Inside3_Motion03
+    400172: S01_Inside3_T
+    400174: S01_Inside_C01
+    400176: S01_Inside_C02
+    400178: S01_Inside_C04
+    400180: S01_Inside_C05
+    400182: S01_Inside_C06
+    400184: S01_Inside_Cable
+    400186: S01_Inside_Motion01
+    400188: S01_Inside_Motion02
+    400190: S01_Inside_Motion03
+    400192: S01_Inside_Motion04
+    400194: S01_Inside_Motion05
+    400196: S01_Inside_Motion06
+    400198: S01_Inside_Motion07
+    400200: S01_Inside_Motion08
+    400202: S01_Inside_Motion09
+    400204: S01_Inside_Motion10
+    400206: S01_Inside_Motion11
+    400208: S01_Inside_T
+    400210: S01_Screen01
+    400212: S01_Screen02
+    400214: S01_Screen03
+    400216: S01_Screen04
+    400218: //RootNode
+    400220: Sparkle
+    400222: Sparkle 1
+    400224: Sparkle 2
+    400226: Sparkle 3
+    400228: sparkleLocal
+    400230: sparkleLocal 1
+    400232: sparkleLocal 2
+    400234: sparkleLocal 3
+    400236: sparkleLocal 4
+    400238: sparkleLocal 5
+    400240: sparkleLocal 6
+    400242: sparkleLocal 7
+    400244: sparkleWorld
+    400246: sparkleWorld 1
+    400248: sparkleWorld 2
+    400250: sparkleWorld 3
+    2300000: DistortBall
+    2300002: S01_Globle_1
+    2300004: S01_Globle_2
+    2300006: S01_Globle_3
+    2300008: S01_Globle_4
+    2300010: S01_Inside2_C01
+    2300012: S01_Inside2_C01_Motion01
+    2300014: S01_Inside2_C01_Motion02
+    2300016: S01_Inside2_C01_Motion03
+    2300018: S01_Inside2_C01_Motion04
+    2300020: S01_Inside2_C04
+    2300022: S01_Inside2_C05
+    2300024: S01_Inside2_C06
+    2300026: S01_Inside2_C09
+    2300028: S01_Inside2_C10
+    2300030: S01_Inside2_Motion01
+    2300032: S01_Inside2_Motion02
+    2300034: S01_Inside2_Motion03
+    2300036: S01_Inside2_Motion04
+    2300038: S01_Inside2_Motion05
+    2300040: S01_Inside2_Motion06
+    2300042: S01_Inside2_Motion07
+    2300044: S01_Inside2_Motion08
+    2300046: S01_Inside2_Motion09
+    2300048: S01_Inside2_T
+    2300050: S01_Inside3_C01
+    2300052: S01_Inside3_C02
+    2300054: S01_Inside3_C02 1
+    2300056: S01_Inside3_C04
+    2300058: S01_Inside3_C06
+    2300060: S01_Inside3_C07
+    2300062: S01_Inside3_C08A
+    2300064: S01_Inside3_C08B
+    2300066: S01_Inside3_C09
+    2300068: S01_Inside3_C11
+    2300070: S01_Inside3_Motion01
+    2300072: S01_Inside3_Motion02
+    2300074: S01_Inside3_Motion03
+    2300076: S01_Inside3_T
+    2300078: S01_Inside_C01
+    2300080: S01_Inside_C02
+    2300082: S01_Inside_C04
+    2300084: S01_Inside_C05
+    2300086: S01_Inside_C06
+    2300088: S01_Inside_Cable
+    2300090: S01_Inside_Motion01
+    2300092: S01_Inside_Motion02
+    2300094: S01_Inside_Motion03
+    2300096: S01_Inside_Motion04
+    2300098: S01_Inside_Motion05
+    2300100: S01_Inside_Motion06
+    2300102: S01_Inside_Motion07
+    2300104: S01_Inside_Motion08
+    2300106: S01_Inside_Motion09
+    2300108: S01_Inside_Motion10
+    2300110: S01_Inside_Motion11
+    2300112: S01_Inside_T
+    2300114: S01_Screen01
+    2300116: S01_Screen02
+    2300118: S01_Screen03
+    2300120: S01_Screen04
+    3300000: DistortBall
+    3300002: S01_Globle_1
+    3300004: S01_Globle_2
+    3300006: S01_Globle_3
+    3300008: S01_Globle_4
+    3300010: S01_Inside2_C01
+    3300012: S01_Inside2_C01_Motion01
+    3300014: S01_Inside2_C01_Motion02
+    3300016: S01_Inside2_C01_Motion03
+    3300018: S01_Inside2_C01_Motion04
+    3300020: S01_Inside2_C04
+    3300022: S01_Inside2_C05
+    3300024: S01_Inside2_C06
+    3300026: S01_Inside2_C09
+    3300028: S01_Inside2_C10
+    3300030: S01_Inside2_Motion01
+    3300032: S01_Inside2_Motion02
+    3300034: S01_Inside2_Motion03
+    3300036: S01_Inside2_Motion04
+    3300038: S01_Inside2_Motion05
+    3300040: S01_Inside2_Motion06
+    3300042: S01_Inside2_Motion07
+    3300044: S01_Inside2_Motion08
+    3300046: S01_Inside2_Motion09
+    3300048: S01_Inside2_T
+    3300050: S01_Inside3_C01
+    3300052: S01_Inside3_C02
+    3300054: S01_Inside3_C02 1
+    3300056: S01_Inside3_C04
+    3300058: S01_Inside3_C06
+    3300060: S01_Inside3_C07
+    3300062: S01_Inside3_C08A
+    3300064: S01_Inside3_C08B
+    3300066: S01_Inside3_C09
+    3300068: S01_Inside3_C11
+    3300070: S01_Inside3_Motion01
+    3300072: S01_Inside3_Motion02
+    3300074: S01_Inside3_Motion03
+    3300076: S01_Inside3_T
+    3300078: S01_Inside_C01
+    3300080: S01_Inside_C02
+    3300082: S01_Inside_C04
+    3300084: S01_Inside_C05
+    3300086: S01_Inside_C06
+    3300088: S01_Inside_Cable
+    3300090: S01_Inside_Motion01
+    3300092: S01_Inside_Motion02
+    3300094: S01_Inside_Motion03
+    3300096: S01_Inside_Motion04
+    3300098: S01_Inside_Motion05
+    3300100: S01_Inside_Motion06
+    3300102: S01_Inside_Motion07
+    3300104: S01_Inside_Motion08
+    3300106: S01_Inside_Motion09
+    3300108: S01_Inside_Motion10
+    3300110: S01_Inside_Motion11
+    3300112: S01_Inside_T
+    3300114: S01_Screen01
+    3300116: S01_Screen02
+    3300118: S01_Screen03
+    3300120: S01_Screen04
+    4300000: S01_Inside_Motion07
+    4300002: S01_Inside_Motion09
+    4300004: DistortBall
+    4300006: S01_Inside_Motion10
+    4300008: S01_Inside_Motion05
+    4300010: S01_Inside_Motion04
+    4300012: S01_Inside_Motion01
+    4300014: S01_Inside_Motion11
+    4300016: S01_Inside_Motion02
+    4300018: S01_Inside_Motion03
+    4300020: S01_Inside_Motion06
+    4300022: S01_Inside_Motion08
+    4300024: S01_Inside_C06
+    4300026: S01_Inside_C04
+    4300028: S01_Inside_T
+    4300030: S01_Inside_C01
+    4300032: S01_Inside_C02
+    4300034: S01_Inside_Cable
+    4300036: S01_Inside_C05
+    4300038: S01_Inside2_C10
+    4300040: S01_Inside2_C05
+    4300042: S01_Inside2_Motion09
+    4300044: S01_Inside2_Motion05
+    4300046: S01_Inside2_Motion02
+    4300048: S01_Inside2_Motion08
+    4300050: S01_Inside2_Motion03
+    4300052: S01_Inside2_Motion07
+    4300054: S01_Inside2_C01_Motion03
+    4300056: S01_Inside2_Motion04
+    4300058: S01_Screen04
+    4300060: S01_Inside2_Motion01
+    4300062: S01_Inside2_C01_Motion02
+    4300064: S01_Inside2_Motion06
+    4300066: S01_Inside2_C01_Motion01
+    4300068: S01_Screen03
+    4300070: S01_Inside2_C01_Motion04
+    4300072: S01_Inside2_C04
+    4300074: S01_Inside2_C01
+    4300076: S01_Inside2_T
+    4300078: S01_Inside2_C06
+    4300080: S01_Inside3_C02
+    4300082: S01_Inside2_C09
+    4300084: S01_Inside3_C11
+    4300086: S01_Screen02
+    4300088: S01_Screen01
+    4300090: S01_Inside3_T
+    4300092: S01_Inside3_C08B
+    4300094: S01_Inside3_C07
+    4300096: S01_Inside3_C01
+    4300098: S01_Inside3_C04
+    4300100: S01_Inside3_C02
+    4300102: S01_Inside3_Motion01
+    4300104: S01_Globle_1
+    4300106: S01_Globle_4
+    4300108: S01_Globle_2
+    4300110: S01_Inside3_Motion03
+    4300112: S01_Globle_3
+    4300114: S01_Inside3_Motion02
+    4300116: S01_Inside3_C09
+    4300118: S01_Inside3_C08A
+    4300120: S01_Inside3_C06
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
