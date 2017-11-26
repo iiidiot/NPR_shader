@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Avatar_Kiana_C1_Texture_Face_Color
-  m_Shader: {fileID: 4800000, guid: 31c750b9bcf42c845a33826a330506d6, type: 3}
+  m_Shader: {fileID: 4800000, guid: 0661916df07288e48b1e106e6c76c543, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -38,11 +38,63 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Hatch0:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Hatch1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Hatch2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Hatch3:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Hatch4:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Hatch5:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Level1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Level2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Level3:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Level4:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Level5:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Level6:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 39999b17e56323840abe29a9f553157c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -54,27 +106,88 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Ramp:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - iChannel0:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _Alpha: 0.5
+    - _Aniso: 1
+    - _Antialias: 0.01
+    - _Beta: 0.5
+    - _Blue: 0.5
+    - _Blur: 0.01
     - _BumpScale: 1
+    - _CircleRadius: 0.05
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _Duration: 1.5
+    - _Eccentricity: 0.25
+    - _EdgeOnly: 1
+    - _ErrorPeriod: 25
+    - _ErrorRange: 0.0015
     - _Factor: 0.495
+    - _Gloss: 20
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _LineWidth: 0.01
     - _Metallic: 0
     - _Mode: 0
+    - _NoiseAmount: 0.02
     - _OcclusionStrength: 1
     - _Outline: 0
+    - _OutlineWidth: 0.01
     - _Parallax: 0.02
+    - _RotationX: 0
+    - _RotationY: 0
+    - _RotationZ: 0
+    - _SampleDistance: 1
+    - _ScaleX: 0
+    - _ScaleY: 0
+    - _Shininess: 40
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
+    - _SpecularScale: 0.01
+    - _SpecularSegment: 0.5
+    - _SplitX: 0
+    - _SplitY: 0
+    - _SquareN: 1
+    - _SquareScale: 0
     - _SrcBlend: 1
     - _Steps: 3.15
+    - _TileFactor: 1
     - _ToonEffect: 0.33
+    - _TranslationX: 0
+    - _TranslationY: 0
     - _UVSec: 0
+    - _WireWidth: 4
+    - _Yellow: 0.5
     - _ZWrite: 1
     m_Colors:
+    - _BackWireColor: {r: 0, g: 0, b: 0, a: 1}
+    - _BackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+    - _CircleColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _DiffuseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _DiffuseSegment: {r: 0.1, g: 0.3, b: 0.6, a: 1}
+    - _EdgeColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EndPosition: {r: 0, g: 0, b: 0, a: 1}
+    - _FrontWireColor: {r: 0, g: 0, b: 0, a: 1}
+    - _HeartColor: {r: 1, g: 0.5, b: 0.3, a: 1}
+    - _LineColor: {r: 1, g: 1, b: 1, a: 1}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Parameters: {r: 0.5, g: 0.5, b: 10, a: 1}
+    - _Sensitivity: {r: 1, g: 1, b: 1, a: 1}
+    - _Specular: {r: 1, g: 1, b: 1, a: 1}
+    - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
+    - _StartPosition: {r: 0, g: 0, b: 0, a: 1}
+    - _WireColor: {r: 0, g: 0, b: 0, a: 1}
+    - iChannelResolution0: {r: 100, g: 100, b: 0, a: 0}
+    - iMouse: {r: 100, g: 100, b: 0, a: 0}
