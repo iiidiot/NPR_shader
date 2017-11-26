@@ -59,7 +59,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _Factor: 0.5
+    - _Factor: 0.495
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -71,8 +71,8 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Steps: 3
-    - _ToonEffect: 0.5
+    - _Steps: 3.15
+    - _ToonEffect: 0.33
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:

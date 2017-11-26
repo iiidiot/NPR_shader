@@ -154,6 +154,7 @@ GameObject:
   - component: {fileID: 72044493}
   - component: {fileID: 72044492}
   - component: {fileID: 72044491}
+  - component: {fileID: 72044496}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -224,13 +225,25 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 72044490}
-  m_LocalRotation: {x: -0.068771794, y: 0.44227895, z: -0.034038264, w: -0.89358896}
-  m_LocalPosition: {x: 1.4140775, y: 1.8004968, z: -1.0474266}
+  m_LocalRotation: {x: -0.073916644, y: 0.3264423, z: -0.025618613, w: -0.9419742}
+  m_LocalPosition: {x: 1.5280281, y: 1.7041943, z: -1.0395856}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &72044496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 72044490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: c654b1e4c1d66b041a391de859e71622, type: 2}
 --- !u!1 &72449870
 GameObject:
   m_ObjectHideFlags: 0
@@ -8468,7 +8481,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 0.8392157, g: 0.91350913, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
