@@ -43,3 +43,5 @@ sysinfo.txt
 
 *.fbm/
 *.fbm.meta
+ProjectSettings/ProjectVersion.txt
+NPR_Shader/
