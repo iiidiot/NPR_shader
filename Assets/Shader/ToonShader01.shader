@@ -1,14 +1,20 @@
 ﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
 
-Shader "NPR/toon" {  
+Shader "NPR/toonShader" {  
     Properties {  
     	_MainTex ("Texture", 2D) = "white" {}
+      	_RampTex ("Texture", 2D) = "white" {}
+      	_RampR ("Ramp Red Factor", Range(0,1)) = 0.5
 
         _Color("Main Color",color)=(1,1,1,1)//物体的颜色  
+        _OutlineColor("Outline Color",color)=(1,1,1,1)//物体的颜色 
         _Outline("Thick of Outline",range(0,0.1))=0.02//挤出描边的粗细  
         _Factor("Factor",range(0,1))=0.5//挤出多远  
         _ToonEffect("Toon Effect",range(0,1))=0.5//卡通化程度（二次元与三次元的交界线）  
         _Steps("Steps of toon",range(0,9))=3//色阶层数  
+
+        _RimColor("Rim Color", Color) = (1,1,1,1)
+        _RimPower ("Rim power",range(0,5)) = 2//边缘强度
     }  
     SubShader {
     	//pass1 for outline  
@@ -22,6 +28,7 @@ Shader "NPR/toon" {
         #include "UnityCG.cginc"  
         float _Outline;  
         float _Factor;  
+        float4 _OutlineColor;
         struct v2f {  
             float4 pos:SV_POSITION;  
         };  
@@ -39,7 +46,7 @@ Shader "NPR/toon" {
         }  
         float4 frag(v2f i):COLOR  
         {  
-            float4 c=0;  
+            float4 c=_OutlineColor;  
             return c;  
         }  
         ENDCG  
@@ -65,17 +72,43 @@ Shader "NPR/toon" {
             float2 uv : TEXCOORD0;
             float3 lightDir:TEXCOORD1;  
             float3 viewDir:TEXCOORD2;  
-            float3 normal:TEXCOORD3;  
+            float3 normal:TEXCOORD3;
+            float4 diff:COLOR0; // diffuse lighting color  
+            float4 rim:COLOR1;
         };  
-  
+
+        half _RampR;
+      	sampler2D _RampTex;
+      	float4 _RimColor;
+        float _RimPower;
         v2f vert (appdata_full v) {  
             v2f o;  
             o.pos=UnityObjectToClipPos(v.vertex);//切换到世界坐标  
-            o.normal=v.normal;  
-            o.lightDir=ObjSpaceLightDir(v.vertex);  
-            o.viewDir=ObjSpaceViewDir(v.vertex);  
+            o.normal=normalize(v.normal);  
+            o.lightDir=normalize(ObjSpaceLightDir(v.vertex));  
+            o.viewDir=normalize(ObjSpaceViewDir(v.vertex));  
   			o.uv = v.texcoord;
-            return o;  
+
+            float difLight = max(0, dot (o.normal, o.lightDir));  
+        	float dif_hLambert = difLight * 0.5 + 0.5;   
+        
+              
+       		float rimLight = max(0, dot (o.normal, o.viewDir));    
+        	float rim_hLambert = rimLight * 0.5 + 0.5;   
+              
+        	float3 ramp = tex2Dlod(_RampTex, float4(dif_hLambert, dif_hLambert,0,0)).rgb;     
+        	ramp.r = ramp.r+_RampR;
+
+			o.diff.rgb = ramp;
+			o.diff.a = 1; 
+
+			//rim light
+			float3 worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
+			float3 viewdir = normalize((_WorldSpaceCameraPos - worldPos));
+            float3 normal = normalize(mul((float3x3)unity_ObjectToWorld,v.normal));
+            
+            o.rim.x = 1-saturate(dot(viewdir,normal));
+			return o;
         }  
         float4 frag(v2f i):COLOR  
         {  
@@ -83,78 +116,14 @@ Shader "NPR/toon" {
             fixed4 col = tex2D(_MainTex, i.uv);
 
             float4 c=1;  
-            float3 N=normalize(i.normal);  
-            float3 viewDir=normalize(i.viewDir);  
-            float3 lightDir=normalize(i.lightDir);  
-            float diff=max(0,dot(N,i.lightDir));//求出正常的漫反射颜色  
-            diff=(diff+1)/2;//做亮化处理  
-            //diff=smoothstep(0,1,diff);//使颜色平滑的在[0,1]范围之内  
-            float toon=floor(diff*_Steps)/_Steps;//把颜色做离散化处理，把diffuse颜色限制在_Steps种（_Steps阶颜色），简化颜色，这样的处理使色阶间能平滑的显示  
-            diff=lerp(diff,toon,_ToonEffect);//根据外部我们可控的卡通化程度值_ToonEffect，调节卡通与现实的比重  
-  
-            c=col*_Color*_LightColor0*(diff);//把最终颜色混合  
+            c = col*i.diff*_Color*_LightColor0 * (pow(i.rim.x,2)+1)*_RimColor*_RimPower;//把最终颜色混合  
+
             return c;  
         }  
         ENDCG  
         }//  
 
         //pass3 for highlight
-        pass{ 
-        Tags{"LightMode"="ForwardAdd"}  
-        Blend One One  
-        Cull Back  
-        ZWrite Off  
-        CGPROGRAM  
-        #pragma vertex vert  
-        #pragma fragment frag  
-        #include "UnityCG.cginc"  
-  
-        float4 _LightColor0;  
-        float4 _Color;  
-        float _Steps;  
-        float _ToonEffect;  
-  
-        struct v2f {  
-            float4 pos:SV_POSITION;  
-            float3 lightDir:TEXCOORD1;  
-            float3 viewDir:TEXCOORD2;  
-            float3 normal:TEXCOORD3;  
-        };  
-  
-        v2f vert (appdata_full v) {  
-            v2f o;  
-            o.pos=UnityObjectToClipPos(v.vertex);  
-            o.normal=v.normal;  
-            o.viewDir=ObjSpaceViewDir(v.vertex);  
-            o.lightDir=_WorldSpaceLightPos0-v.vertex;  
-            return o;  
-        }  
-        float4 frag(v2f i):COLOR  
-        {  
-
-            float4 c=1;  
-            float3 N=normalize(i.normal);  
-            float3 viewDir=normalize(i.viewDir);  
-            float dist=length(i.lightDir);//求出距离光源的距离  
-            float3 lightDir=normalize(i.lightDir);  
-            float diff=max(0,dot(N,i.lightDir));  
-            diff=(diff+1)/2;  
-            diff=smoothstep(0,1,diff);  
-            float atten=1/(dist);//根据距光源的距离求出衰减  
-            float toon=floor(diff*atten*_Steps)/_Steps;  
-            diff=lerp(diff,toon,_ToonEffect);  
-  
-            half3 h = normalize (lightDir + viewDir);//求出半角向量  
-            float nh = max (0, dot (N, h));  
-            float spec = pow (nh, 32.0);//求出高光强度  
-            float toonSpec=floor(spec*atten*2)/ 2;//把高光也离散化  
-            spec=lerp(spec,toonSpec,_ToonEffect);//调节卡通与现实高光的比重  
-  
-              
-            c=_Color*_LightColor0*(diff+spec);//求出最终颜色  
-            return c;  
-        }  
-        ENDCG  
-        }//  
+       
     }   
 }  
