@@ -38,7 +38,11 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+<<<<<<< HEAD
   m_IndirectSpecularColor: {r: 0.44916606, g: 0.49588895, b: 0.55773526, a: 1}
+=======
+  m_IndirectSpecularColor: {r: 0.4465794, g: 0.49641263, b: 0.5748176, a: 1}
+>>>>>>> 72dcfcecf8a3593bf9f4c34b7bff6486e31a7a60
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -155,6 +159,8 @@ GameObject:
   - component: {fileID: 72044492}
   - component: {fileID: 72044491}
   - component: {fileID: 72044496}
+  - component: {fileID: 72044498}
+  - component: {fileID: 72044497}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -199,7 +205,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.1
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -244,6 +250,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: c654b1e4c1d66b041a391de859e71622, type: 2}
+--- !u!114 &72044497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 72044490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffccb11dd51fb408685a4b9771bc875b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  rotationSpeed: 100
+--- !u!114 &72044498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 72044490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca45456a55af14edbae6c4a8e7e0c64b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshes:
+  - {fileID: 642650013}
+  - {fileID: 1920484964}
+  - {fileID: 1798018252}
+  - {fileID: 1042603099}
+  shader: {fileID: 4800000, guid: 0661916df07288e48b1e106e6c76c543, type: 3}
 --- !u!1 &72449870
 GameObject:
   m_ObjectHideFlags: 0
@@ -8504,6 +8540,20 @@ Light:
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0
+  m_FalloffTable:
+    m_Table[0]: 0
+    m_Table[1]: 0
+    m_Table[2]: 0
+    m_Table[3]: 0
+    m_Table[4]: 0
+    m_Table[5]: 0
+    m_Table[6]: 0
+    m_Table[7]: 0
+    m_Table[8]: 0
+    m_Table[9]: 0
+    m_Table[10]: 0
+    m_Table[11]: 0
+    m_Table[12]: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
