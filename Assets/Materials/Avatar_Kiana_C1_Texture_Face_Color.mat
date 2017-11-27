@@ -9,10 +9,14 @@ Material:
   m_Name: Avatar_Kiana_C1_Texture_Face_Color
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Shader: {fileID: 4800000, guid: 7b4517b81f8f6d1428f8ed6a336916ff, type: 3}
 =======
   m_Shader: {fileID: 4800000, guid: 0661916df07288e48b1e106e6c76c543, type: 3}
 >>>>>>> 72dcfcecf8a3593bf9f4c34b7bff6486e31a7a60
+=======
+  m_Shader: {fileID: 4800000, guid: 31c750b9bcf42c845a33826a330506d6, type: 3}
+>>>>>>> parent of c35dcec... add ramp toon shader
 =======
   m_Shader: {fileID: 4800000, guid: 31c750b9bcf42c845a33826a330506d6, type: 3}
 >>>>>>> parent of c35dcec... add ramp toon shader
@@ -116,6 +120,7 @@ Material:
         m_Offset: {x: 0, y: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - _RampTex:
         m_Texture: {fileID: 2800000, guid: 9c03418fa9af258479ce478a1a97bad4, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -139,6 +144,9 @@ Material:
     - _Blue: 0.5
     - _Blur: 0.01
 >>>>>>> 72dcfcecf8a3593bf9f4c34b7bff6486e31a7a60
+=======
+    m_Floats:
+>>>>>>> parent of c35dcec... add ramp toon shader
 =======
     m_Floats:
 >>>>>>> parent of c35dcec... add ramp toon shader
@@ -167,6 +175,7 @@ Material:
     - _Parallax: 0.02
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - _RampR: 0.5
 =======
     - _RotationX: 0
@@ -177,6 +186,8 @@ Material:
     - _ScaleY: 0
     - _Shininess: 40
 >>>>>>> 72dcfcecf8a3593bf9f4c34b7bff6486e31a7a60
+=======
+>>>>>>> parent of c35dcec... add ramp toon shader
 =======
 >>>>>>> parent of c35dcec... add ramp toon shader
     - _SmoothnessTextureChannel: 0
@@ -208,6 +219,7 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - _RampColor: {r: 1, g: 1, b: 1, a: 1}
 =======
     - _EndPosition: {r: 0, g: 0, b: 0, a: 1}
@@ -224,5 +236,7 @@ Material:
     - iChannelResolution0: {r: 100, g: 100, b: 0, a: 0}
     - iMouse: {r: 100, g: 100, b: 0, a: 0}
 >>>>>>> 72dcfcecf8a3593bf9f4c34b7bff6486e31a7a60
+=======
+>>>>>>> parent of c35dcec... add ramp toon shader
 =======
 >>>>>>> parent of c35dcec... add ramp toon shader
