@@ -3,7 +3,7 @@
 Shader "NPR/toon" {  
     Properties {  
     	_MainTex ("Texture", 2D) = "white" {}
-
+    	_RampTex ("RampTexture", 2D) = "white" {}
         _Color("Main Color",color)=(1,1,1,1)//物体的颜色  
         _Outline("Thick of Outline",range(0,0.1))=0.02//挤出描边的粗细  
         _Factor("Factor",range(0,1))=0.5//挤出多远  
@@ -45,7 +45,7 @@ Shader "NPR/toon" {
         ENDCG  
         }//end of pass  
 
-        //pass2 for diffuse
+        //pass2 for diffuse ramp
         pass{//平行光的的pass渲染  
         Tags{"LightMode"="ForwardBase"}  
         Cull Back  
@@ -53,6 +53,13 @@ Shader "NPR/toon" {
         #pragma vertex vert  
         #pragma fragment frag  
         #include "UnityCG.cginc"  
+
+        sampler2D _RampTex;
+        float3 DiffuseRampCoeff(in float3 lightDir, in float3 n) {
+    		// Map value from [-1, 1] to [0, 1]
+    		float rampCoord = dot(lightDir, n) * 0.5 + 0.5;
+    		return tex2D(_RampTex, float2(rampCoord, rampCoord)).rgb;
+		}
   
         float4 _LightColor0;  
         float4 _Color;  
@@ -71,9 +78,9 @@ Shader "NPR/toon" {
         v2f vert (appdata_full v) {  
             v2f o;  
             o.pos=UnityObjectToClipPos(v.vertex);//切换到世界坐标  
-            o.normal=v.normal;  
-            o.lightDir=ObjSpaceLightDir(v.vertex);  
-            o.viewDir=ObjSpaceViewDir(v.vertex);  
+            o.normal=normalize(v.normal);  
+            o.lightDir=normalize(ObjSpaceLightDir(v.vertex));  
+            o.viewDir=normalize(ObjSpaceViewDir(v.vertex));  
   			o.uv = v.texcoord;
             return o;  
         }  
@@ -83,16 +90,14 @@ Shader "NPR/toon" {
             fixed4 col = tex2D(_MainTex, i.uv);
 
             float4 c=1;  
-            float3 N=normalize(i.normal);  
-            float3 viewDir=normalize(i.viewDir);  
-            float3 lightDir=normalize(i.lightDir);  
-            float diff=max(0,dot(N,i.lightDir));//求出正常的漫反射颜色  
-            diff=(diff+1)/2;//做亮化处理  
-            //diff=smoothstep(0,1,diff);//使颜色平滑的在[0,1]范围之内  
-            float toon=floor(diff*_Steps)/_Steps;//把颜色做离散化处理，把diffuse颜色限制在_Steps种（_Steps阶颜色），简化颜色，这样的处理使色阶间能平滑的显示  
-            diff=lerp(diff,toon,_ToonEffect);//根据外部我们可控的卡通化程度值_ToonEffect，调节卡通与现实的比重  
+            float3 N=i.normal;  
+            float3 viewDir=i.viewDir;  
+            float3 lightDir=i.lightDir;  
+
+            float3 ramp = DiffuseRampCoeff(lightDir, N);
   
-            c=col*_Color*_LightColor0*(diff);//把最终颜色混合  
+            c.rgb =col.rgb*_Color.rgb*_LightColor0.rgb* ramp;//把最终颜色混合  
+            c.a = col.a;
             return c;  
         }  
         ENDCG  
