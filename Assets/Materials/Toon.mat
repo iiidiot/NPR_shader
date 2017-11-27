@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Toon
-  m_Shader: {fileID: 4800000, guid: 31c750b9bcf42c845a33826a330506d6, type: 3}
+  m_Shader: {fileID: 4800000, guid: 7b4517b81f8f6d1428f8ed6a336916ff, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -38,68 +38,11 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-<<<<<<< HEAD
-    - _Hatch0:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Hatch1:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Hatch2:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Hatch3:
-        m_Texture: {fileID: 0}
-=======
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 39999b17e56323840abe29a9f553157c, type: 3}
->>>>>>> parent of c35dcec... add ramp toon shader
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Hatch4:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Hatch5:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Level1:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Level2:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Level3:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Level4:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Level5:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Level6:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 39999b17e56323840abe29a9f553157c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _NoiseTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -111,116 +54,37 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     - _RampTex:
         m_Texture: {fileID: 2800000, guid: 9c03418fa9af258479ce478a1a97bad4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Amount: 0.5
-=======
-    - _Ramp:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _Alpha: 0.5
-    - _Beta: 0.5
-    - _Blue: 0.5
->>>>>>> 72dcfcecf8a3593bf9f4c34b7bff6486e31a7a60
-=======
-    m_Floats:
->>>>>>> parent of c35dcec... add ramp toon shader
-=======
-    m_Floats:
->>>>>>> parent of c35dcec... add ramp toon shader
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _EdgeOnly: 1
-    - _ErrorPeriod: 25
-    - _ErrorRange: 0.0015
     - _Factor: 0.522
-    - _Gloss: 20
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
-    - _NoiseAmount: 0.02
     - _OcclusionStrength: 1
     - _Outline: 0.0392
     - _Parallax: 0.02
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     - _RampR: 1
-=======
-    - _RotationX: 0
-    - _RotationY: 0
-    - _RotationZ: 0
-    - _SampleDistance: 1
-    - _ScaleX: 0
-    - _ScaleY: 0
-    - _Shininess: 40
->>>>>>> 72dcfcecf8a3593bf9f4c34b7bff6486e31a7a60
-=======
->>>>>>> parent of c35dcec... add ramp toon shader
-=======
->>>>>>> parent of c35dcec... add ramp toon shader
     - _SmoothnessTextureChannel: 0
+    - _SomeValue: 2.5
     - _SpecularHighlights: 1
-    - _SpecularScale: 0.01
-    - _SpecularSegment: 0.5
-    - _SplitX: 0
-    - _SplitY: 0
-    - _SquareN: 1
-    - _SquareScale: 0
     - _SrcBlend: 1
     - _Steps: 5.52
-    - _TileFactor: 1
     - _ToonEffect: 0.434
-    - _TranslationX: 0
-    - _TranslationY: 0
     - _UVSec: 0
-    - _WireWidth: 4
-    - _Yellow: 0.5
     - _ZWrite: 1
     m_Colors:
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     - _AmbientColor: {r: 1, g: 1, b: 1, a: 1}
-=======
-    - _BackWireColor: {r: 0, g: 0, b: 0, a: 1}
-    - _BackgroundColor: {r: 1, g: 1, b: 1, a: 1}
->>>>>>> 72dcfcecf8a3593bf9f4c34b7bff6486e31a7a60
-=======
->>>>>>> parent of c35dcec... add ramp toon shader
-=======
->>>>>>> parent of c35dcec... add ramp toon shader
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _DiffuseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _DiffuseSegment: {r: 0.1, g: 0.3, b: 0.6, a: 1}
-    - _EdgeColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     - _EmissiveColor: {r: 1, g: 1, b: 1, a: 1}
     - _RampColor: {r: 1, g: 1, b: 1, a: 1}
-=======
-    - _FrontWireColor: {r: 0, g: 0, b: 0, a: 1}
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Sensitivity: {r: 1, g: 1, b: 1, a: 1}
-    - _Specular: {r: 1, g: 1, b: 1, a: 1}
-    - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
-    - _WireColor: {r: 0, g: 0, b: 0, a: 1}
->>>>>>> 72dcfcecf8a3593bf9f4c34b7bff6486e31a7a60
-=======
->>>>>>> parent of c35dcec... add ramp toon shader
-=======
->>>>>>> parent of c35dcec... add ramp toon shader
