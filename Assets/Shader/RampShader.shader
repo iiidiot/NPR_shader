@@ -5,14 +5,17 @@
       _Amount ("Extrusion Amount", Range(-1,1)) = 0.5
       _RampTex ("Texture", 2D) = "white" {}
       _RampR ("Ramp Red Factor", Range(0,1)) = 0.5
+	  _RimColor("Rim Color", Color) = (1,1,1,1)
+      _RimPower ("Rim power",range(0,5)) = 2//边缘强度
     }
     SubShader {
+     
+
+	  
       Tags { "RenderType" = "Opaque" }
       CGPROGRAM
       #pragma surface surf Ramp vertex:vert
-
-
-      //lighting model
+	 //lighting model
       half _RampR;
       sampler2D _RampTex;
       half4 LightingRamp (SurfaceOutput s, half3 lightDir, half3 viewDir, half atten) {
@@ -48,6 +51,11 @@
           o.Albedo = tex2D (_MainTex, IN.uv_MainTex).rgb;
       }
       ENDCG
+	  
+	  
     } 
+
+
+
     Fallback "Diffuse"
 }
