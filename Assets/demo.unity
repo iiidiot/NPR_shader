@@ -270,8 +270,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca45456a55af14edbae6c4a8e7e0c64b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meshes: []
+  meshes:
+  - {fileID: 1920484964}
   shader: {fileID: 0}
+  thickness: 0.000005
 --- !u!114 &72044499
 MonoBehaviour:
   m_ObjectHideFlags: 0
