@@ -226,6 +226,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2300000, guid: fff0970969e56734588b6b144eb85ac9, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: fff0970969e56734588b6b144eb85ac9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -310,6 +314,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: fff0970969e56734588b6b144eb85ac9, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: e07230b80270e1b4fa11e1e97c86c706, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fff0970969e56734588b6b144eb85ac9, type: 3}
   m_IsPrefabParent: 0
