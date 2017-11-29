@@ -114,6 +114,7 @@ public class MeshContour : MonoBehaviour
         List<int> tri1 = new List<int>();
         bool doJudgeNorm;
         int v1 = 0, v2 = 0;
+        int ev1 = 0, ev2 = 0;
         for (i = 0; i < triangles.Length / 3; i++)
         {
             tri1.Add(triangles[i]);
@@ -124,12 +125,15 @@ public class MeshContour : MonoBehaviour
                 doJudgeNorm = false;
                 if (tri1.Remove(triangles[j])) // has j
                 {
+                    ev1 = triangles[j];
                     if (tri1.Remove(triangles[j + 1])) // has j+1
                     {
                         // j~j+1 is common edge, judge (j+2)'s norm and tri1[0]'s norm
                         doJudgeNorm = true;
                         v1 = triangles[j + 2];
                         v2 = tri1[0];
+                        
+                        ev2 = triangles[j + 1];
                     }
                     else if (tri1.Remove(triangles[j + 2]))
                     {
@@ -137,6 +141,8 @@ public class MeshContour : MonoBehaviour
                         doJudgeNorm = true;
                         v1 = triangles[j + 1];
                         v2 = tri1[0];
+                        
+                        ev2 = triangles[j + 2];
                     }
                     else
                     {
@@ -145,12 +151,14 @@ public class MeshContour : MonoBehaviour
                 }
                 else if (tri1.Remove(triangles[j + 1])) // has j+1
                 {
+                    ev1 = triangles[j + 1];
                     if (tri1.Remove(triangles[j + 2]))
                     {
                         // j+1~j+2 is common edge, judge (j)'s norm and tri1[0]'s norm 
                         doJudgeNorm = true;
                         v1 = triangles[j];
                         v2 = tri1[0];
+                        ev2 = triangles[j + 2];
                     }
                     else
                     {
@@ -162,8 +170,8 @@ public class MeshContour : MonoBehaviour
                     if (Vector3.Dot(Model2Camera(normals[v1]), cameraFace) * Vector3.Dot(Model2Camera(normals[v2]), cameraFace) < 0)
                     {
                         //draw edge v1~v2
-                        drawVertexList.Add(vertices[v1]);
-                        drawVertexList.Add(vertices[v2]);
+                        drawVertexList.Add(vertices[ev1]);
+                        drawVertexList.Add(vertices[ev2]);
                     }
 
                 }
