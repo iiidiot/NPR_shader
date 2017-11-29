@@ -60,7 +60,7 @@ public class SetShaderGUI : MonoBehaviour
 			if (mesh != null)
 			{
 				float d = (mesh.transform.position - cam).magnitude;
-				float thick = thickness * d * d;
+				float thick = Mathf.Min(thickness * d * d, 0.0001f);
 				foreach (var mat in mesh.materials)
 				{
 					if (mat != null)
