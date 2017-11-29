@@ -40,8 +40,6 @@ sysinfo.txt
 *.assets
 *.resS
 
-*.fbm/
-*.fbm.meta
 ProjectSettings/ProjectVersion.txt
 NPR_Shader/
 Assets/demo.unity
