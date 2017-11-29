@@ -1,6 +1,6 @@
 ﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
 
-Shader "NPR/toonShader" {  
+Shader "NPR/Toon/Face" {  
     Properties {  
     	_MainTex ("Texture", 2D) = "white" {}
       	_RampTex ("Texture", 2D) = "white" {}
@@ -8,7 +8,7 @@ Shader "NPR/toonShader" {
 
         _Color("Main Color",color)=(1,1,1,1)//物体的颜色  
         _OutlineColor("Outline Color",color)=(1,1,1,1)//物体的颜色 
-        _Outline("Thick of Outline",range(0,0.1))=0.02//挤出描边的粗细  
+        _Outline("Thick of Outline",range(0,0.1))=0.0//挤出描边的粗细  
         _Factor("Factor",range(0,1))=0.5//挤出多远  
         _ToonEffect("Toon Effect",range(0,1))=0.5//卡通化程度（二次元与三次元的交界线）  
         _Steps("Steps of toon",range(0,9))=3//色阶层数  
@@ -116,7 +116,7 @@ Shader "NPR/toonShader" {
             fixed4 col = tex2D(_MainTex, i.uv);
 
             float4 c=1;  
-            c = col*i.diff*_Color*_LightColor0 * (pow(i.rim.x,2)+1)*_RimColor*_RimPower;//把最终颜色混合  
+            c = col*i.diff*_Color*_LightColor0 + (pow(i.rim.x,2))*_RimColor*_RimPower;//把最终颜色混合  
 
             return c;  
         }  

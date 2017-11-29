@@ -55,7 +55,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RampTex:
-        m_Texture: {fileID: 2800000, guid: 7c127f585a5cf724d9d7e3fcb98d8349, type: 3}
+        m_Texture: {fileID: 2800000, guid: 888f245caed3e894daa731e2e6235897, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -71,10 +71,10 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _Outline: 0.00002
+    - _Outline: 0.00005
     - _Parallax: 0.02
     - _RampR: 0
-    - _RimPower: 1
+    - _RimPower: 0.84
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1

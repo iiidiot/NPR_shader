@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44916433, g: 0.4958915, b: 0.55773884, a: 1}
+  m_IndirectSpecularColor: {r: 0.44270036, g: 0.4849803, b: 0.53471714, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -228,8 +228,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 72044490}
-  m_LocalRotation: {x: -0.073916644, y: 0.3264423, z: -0.025618613, w: -0.9419742}
-  m_LocalPosition: {x: 1.5280281, y: 1.7041943, z: -1.0395856}
+  m_LocalRotation: {x: 0.049612463, y: -0.46013874, z: 0.025508229, w: 0.8860928}
+  m_LocalPosition: {x: 0.6726132, y: 1.915648, z: -0.57046914}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -265,7 +265,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 72044490}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca45456a55af14edbae6c4a8e7e0c64b, type: 3}
   m_Name: 
@@ -8601,20 +8601,6 @@ Light:
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0
-  m_FalloffTable:
-    m_Table[0]: 0
-    m_Table[1]: 0
-    m_Table[2]: 0
-    m_Table[3]: 0
-    m_Table[4]: 0
-    m_Table[5]: 0
-    m_Table[6]: 0
-    m_Table[7]: 0
-    m_Table[8]: 0
-    m_Table[9]: 0
-    m_Table[10]: 0
-    m_Table[11]: 0
-    m_Table[12]: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
@@ -8625,13 +8611,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1907380689}
-  m_LocalRotation: {x: 0.12390504, y: -0.66795844, z: 0.11417622, w: 0.72487444}
+  m_LocalRotation: {x: 0.1279227, y: -0.13703988, z: -0.086412355, w: 0.97846246}
   m_LocalPosition: {x: 2.93, y: 7.11, z: -1.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 19.4, y: -85.32, z: 0}
+  m_LocalEulerAnglesHint: {x: 13.1, y: -17.34, z: -12.1}
 --- !u!1 &1912587616
 GameObject:
   m_ObjectHideFlags: 0
