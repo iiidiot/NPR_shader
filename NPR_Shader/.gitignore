@@ -21,8 +21,13 @@ ExportedObj/
 *.tmp
 *.user
 *.userprefs
+*.pidb
 *.booproj
 *.svd
+*.pdb
+
+# Unity3D generated meta files
+*.pidb.meta
 
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
@@ -36,3 +41,5 @@ sysinfo.txt
 *.resS
 
 ProjectSettings/ProjectVersion.txt
+NPR_Shader/
+Assets/demo.unity
