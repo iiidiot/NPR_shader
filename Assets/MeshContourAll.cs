@@ -28,18 +28,36 @@ public class MeshContourAll : MonoBehaviour {
 
         drawVertexList = new List<Vector3>();
 
-
-        lr = this.GetComponent<LineRenderer>();
-        //lr = this.transform.Find("line").GetComponent<LineRenderer>();
-
-        lr.positionCount = vertices.Length;//drawvertexlist.count/2;
-        int i = 0;
-        foreach (Vector3 v in vertices)
+        int i;
+        for (i = 0; i < triangles.Length; i = i+3)
         {
-
-            lr.SetPosition(i, v);
-            i++;
+            GameObject newLine = Instantiate(Resources.Load("Line")) as GameObject;
+            newLine.transform.SetParent(this.transform);
+            newLine.transform.rotation = Quaternion.Euler(Vector3.zero);
+            newLine.transform.localEulerAngles = Vector3.zero;
+            newLine.transform.localScale = new Vector3(1, 1, 1);
+            LineRenderer lr = newLine.GetComponent<LineRenderer>();
+            lr.useWorldSpace = false;
+            lr.startWidth = 0.001f;
+            lr.endWidth = 0.001f;
+            lr.positionCount = 3;
+            lr.SetPosition(0, vertices[triangles[i]]);
+            lr.SetPosition(1, vertices[triangles[i + 1]]);
+            lr.SetPosition(2, vertices[triangles[i + 2]]);
         }
+
+
+        //lr = this.GetComponent<LineRenderer>();
+        ////lr = this.transform.Find("line").GetComponent<LineRenderer>();
+
+        //lr.positionCount = vertices.Length;//drawvertexlist.count/2;
+        //int i = 0;
+        //foreach (Vector3 v in vertices)
+        //{
+
+        //    lr.SetPosition(i, v);
+        //    i++;
+        //}
     }
 
     // Update is called once per frame
