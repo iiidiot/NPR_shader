@@ -82,6 +82,7 @@ Material:
     - _Specular: 0.5
     - _SpecularHighlights: 1
     - _SrcBlend: 1
+    - _Step: 7.99
     - _Steps: 3
     - _ToonEffect: 0.5
     - _UVSec: 0

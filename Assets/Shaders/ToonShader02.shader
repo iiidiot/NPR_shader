@@ -4,6 +4,7 @@ Shader "NPR/Toon/Hair" {
     Properties {  
     	_MainTex ("Texture", 2D) = "white" {}
       	_RampTex ("Ramp Texture", 2D) = "white" {}
+      	_Step ("Color Step", Range(1, 100)) = 10
 
         _Color("Main Color",color)=(1,1,1,1)//物体的颜色  
         _OutlineColor("Outline Color",color)=(1,1,1,1)//物体的颜色 
@@ -79,6 +80,7 @@ Shader "NPR/Toon/Hair" {
       	sampler2D _RampTex;
       	float4 _RimColor;
         float _RimPower;
+        float _Step;
         v2f vert (appdata_full v) {  
             v2f o;  
             o.pos=UnityObjectToClipPos(v.vertex);//切换到世界坐标  
@@ -107,6 +109,11 @@ Shader "NPR/Toon/Hair" {
         float _AnisoOffset;  
         float _Specular;  
         float _SpecPower;  
+        float toon(float col, float n)
+        {
+        	float t=floor(col*n)/n;
+        	return t;
+        }
         float4 frag(v2f i):COLOR  
         {  
         	// sample texture
@@ -125,6 +132,9 @@ Shader "NPR/Toon/Hair" {
   
             fixed4 c;  
             c.rgb = ((col*i.diff*_Color*_LightColor0).rgb + (_LightColor0.rgb * _SpecularColor.rgb * spec));  
+            c.r = toon(c.r,_Step);
+            c.g = toon(c.g,_Step);
+            c.b = toon(c.b,_Step);
             c.a = 1.0;  
             return c;  
         }  

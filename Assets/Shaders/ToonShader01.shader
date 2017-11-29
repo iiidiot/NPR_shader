@@ -2,6 +2,7 @@
 
 Shader "NPR/Toon/Face" {  
     Properties {  
+    	_Step ("Color Step", Range(1, 100)) = 10
     	_MainTex ("Texture", 2D) = "white" {}
       	_RampTex ("Texture", 2D) = "white" {}
       	_RampR ("Ramp Red Factor", Range(0,1)) = 0.5
@@ -110,6 +111,13 @@ Shader "NPR/Toon/Face" {
             o.rim.x = 1-saturate(dot(viewdir,normal));
 			return o;
         }  
+
+        float _Step;
+        float toon(float col, float n)
+        {
+        	float t=floor(col*n)/n;
+        	return t;
+        }
         float4 frag(v2f i):COLOR  
         {  
         	// sample texture
@@ -117,7 +125,9 @@ Shader "NPR/Toon/Face" {
 
             float4 c=1;  
             c = col*i.diff*_Color*_LightColor0 + (pow(i.rim.x,2))*_RimColor*_RimPower;//把最终颜色混合  
-
+            c.r = toon(c.r,_Step);
+            c.g = toon(c.g,_Step);
+            c.b = toon(c.b,_Step);
             return c;  
         }  
         ENDCG  

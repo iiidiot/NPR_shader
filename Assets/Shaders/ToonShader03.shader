@@ -1,9 +1,10 @@
 ﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
 
-Shader "NPR/Toon/Boday" {  
+Shader "NPR/Toon/Body" {  
     Properties {  
     	_MainTex ("Texture", 2D) = "white" {}
       	_RampTex ("Texture", 2D) = "white" {}
+      	_Step ("Color Step", Range(1, 100)) = 10
 
         _Color("Main Color",color)=(1,1,1,1)//物体的颜色  
         _OutlineColor("Outline Color",color)=(1,1,1,1)//物体的颜色 
@@ -105,6 +106,13 @@ Shader "NPR/Toon/Boday" {
             o.rim.x = 1-saturate(dot(viewdir,normal));
 			return o;
         }  
+
+        float _Step;
+        float toon(float col, float n)
+        {
+        	float t=floor(col*n)/n;
+        	return t;
+        }
         float4 frag(v2f i):COLOR  
         {  
         	// sample texture
@@ -112,7 +120,9 @@ Shader "NPR/Toon/Boday" {
 
             float4 c=1;  
             c = col*i.diff*_Color*_LightColor0 + (pow(i.rim.x,2))*_RimColor*_RimPower;//把最终颜色混合  
-
+            c.r = toon(c.r,_Step);
+            c.g = toon(c.g,_Step);
+            c.b = toon(c.b,_Step);
             return c;  
         }  
         ENDCG  
