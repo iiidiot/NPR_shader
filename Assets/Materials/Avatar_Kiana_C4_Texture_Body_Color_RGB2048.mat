@@ -77,6 +77,7 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
+    - _Step: 30
     - _Steps: 3
     - _ToonEffect: 0.5
     - _UVSec: 0
